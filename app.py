@@ -7,7 +7,10 @@ import base64
 from datetime import datetime
 import os
 import time
+from dotenv import load_dotenv
 
+
+load_dotenv()
 st.set_page_config(
     page_title="FactCheck AI — Truth Layer",
     page_icon="🔍",
@@ -314,8 +317,8 @@ st.markdown('<div class="hero-title">FactCheck AI</div>', unsafe_allow_html=True
 st.markdown('<div class="hero-sub">// Automated Truth Layer — Powered by Groq + Tavily </div>', unsafe_allow_html=True)
 
 # Key checks
-groq_key = get_secret("GROQ_API_KEY")
-tavily_key = get_secret("TAVILY_API_KEY")
+groq_key = os.getenv("GROQ_API_KEY")
+tavily_key = os.getenv("TAVILY_API_KEY")
 
 if not groq_key:
     st.warning("⚠️ GROQ_API_KEY not found. Please add it in Streamlit Secrets.")

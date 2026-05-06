@@ -1,18 +1,31 @@
-# FactCheck AI
+# AI Fact-Checking Web App
 
-AI-powered fact-checking web application that extracts claims from PDF documents and verifies them using live web search and LLM reasoning.
+## Overview
+
+This project is an AI-powered Fact-Checking Web Application that automatically verifies factual claims from uploaded PDF documents.
+
+The system extracts claims such as:
+- statistics
+- percentages
+- dates
+- measurable statements
+- company metrics
+
+It then cross-references those claims with live web data and classifies them as:
+- Verified
+- Inaccurate
+- False
 
 ---
 
 ## Features
 
-- Upload PDF documents
-- Automatic claim extraction
-- AI-powered fact verification
-- Live web search integration
-- Streamlit-based UI
-- JSON report download
-- Modern responsive interface
+- PDF Upload Interface
+- AI-based Claim Extraction
+- Live Web Verification
+- Fact Classification
+- Streamlit UI
+- Public Cloud Deployment
 
 ---
 
@@ -20,30 +33,14 @@ AI-powered fact-checking web application that extracts claims from PDF documents
 
 - Python
 - Streamlit
-- Groq API
+- Groq (Llama 3)
 - Tavily Search API
-- PyMuPDF
-- spaCy
-- Requests
+- pypdf
 
 ---
 
-## Project Structure
+## Run Locally
 
 ```bash
-factcheck-ai/
-│
-├── app.py
-├── requirements.txt
-├── runtime.txt
-├── README.md
-├── .gitignore
-│
-├── services/
-│   ├── pdf_parser.py
-│   ├── claim_extractor.py
-│   ├── verifier.py
-│   └── web_search.py
-│
-└── utils/
-    └── prompts.py
+pip install -r requirements.txt
+streamlit run app.py
