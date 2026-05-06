@@ -1,10 +1,7 @@
 streamlit
 groq
-PyMuPDF
+requests
+python-dotenv
 PyPDF2
 pypdf
 tavily-python
-python-dotenv
-requests
-spacy
-en-core-web-sm
