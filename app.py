@@ -318,10 +318,10 @@ groq_key = get_secret("GROQ_API_KEY")
 tavily_key = get_secret("TAVILY_API_KEY")
 
 if not groq_key:
-    st.error("⚠️ Missing GROQ_API_KEY in Streamlit secrets.")
-    st.stop()
+    st.warning("⚠️ GROQ_API_KEY not found. Please add it in Streamlit Secrets.")
+
 if not tavily_key:
-    st.warning("⚠️ Missing TAVILY_API_KEY — web search disabled. Add it to Streamlit secrets for full fact-checking.")
+    st.warning("⚠️ TAVILY_API_KEY not found. Web verification may not work.")
 
 col1, col2 = st.columns([1.2, 1])
 
